@@ -111,3 +111,10 @@ The **Athletic Sales Data Analysis with Pandas** project provides a comprehensiv
 The visualizations and analyses presented in this project highlight the importance of understanding regional sales trends, retailer performance, and product profitability. These insights enable businesses to tailor their strategies and maximize their impact.
 
 This project has also enhanced my understanding of data analysis techniques and how they can be applied to real-world business scenarios using Python and Pandas.
+
+## References
+
+Sales Product Data. Available: [https://www.kaggle.com/datasets/knightbearr/sales-product-data](https://www.kaggle.com/datasets/knightbearr/sales-product-data)
+
+The sales product data above was modified by edX Boot Camps LLC, and is intended for educational purposes only.
+
