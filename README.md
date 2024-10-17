@@ -117,4 +117,3 @@ This project has also enhanced my understanding of data analysis techniques and 
 Sales Product Data. Available: [https://www.kaggle.com/datasets/knightbearr/sales-product-data](https://www.kaggle.com/datasets/knightbearr/sales-product-data)
 
 The sales product data above was modified by edX Boot Camps LLC, and is intended for educational purposes only.
-
