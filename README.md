@@ -1,119 +1,99 @@
 # Athletic Sales Data Analysis with Pandas
 
 ## Purpose
-The **Athletic Sales Data Analysis with Pandas** program is designed to provide insights into product sales, regional performance, and retailer profitability for a fictional athletic footwear company. This project uses Python's Pandas library to explore and analyze sales data, uncovering valuable business insights. By examining sales across various regions, products, and retailers, this analysis highlights key trends and performance metrics that can drive strategic decision-making for businesses.
+The **Athletic Sales Data Analysis with Pandas** program provides insights into product sales, regional performance, and retailer profitability for a fictional athletic footwear company. This project uses Python's Pandas library to explore and analyze sales data, highlighting key trends and metrics to aid business decision-making.
 
-As a data analyst, I created this project to enhance my skills in working with large datasets and solving real-world business problems using Python. This project simulates a business scenario where data analysis helps identify opportunities for growth, customer preferences, and profitability improvements. It allowed me to apply data transformation, aggregation, and visualization techniques, enhancing my data analysis proficiency.
+As a data analyst, I developed this project to enhance my skills in working with large datasets and solving real-world business problems. The project simulates a business scenario, allowing me to apply data transformation, aggregation, and visualization techniques using Python.
 
 ## Overview
-The **Athletic Sales Data Analysis with Pandas** project guides users through the process of exploring, transforming, and analyzing a sales dataset. The goal is to answer critical business questions such as:
+The **Athletic Sales Data Analysis with Pandas** project addresses key business questions:
 
 - Which regions and retailers generate the highest sales?
-- What are the sales trends across different product categories and time periods?
-- Which products generate the most profit, and in which regions?
+- What are the sales trends across product categories and time periods?
+- Which products are most profitable, and in which regions?
 - How do sales methods vary across retailers?
 
-This project provides hands-on experience in manipulating and analyzing data using Pandas, along with visualizing insights through Matplotlib and Seaborn.
+This project demonstrates the use of Pandas for data manipulation and Matplotlib/Seaborn for visualizations.
 
 ## Data Dictionary
-The dataset includes the following columns:
+The dataset contains the following columns:
 
 | Column          | Data Type  | Description                                                   |
 |-----------------|------------|---------------------------------------------------------------|
 | retailer        | object     | Name of the retailer                                          |
 | retailer_id     | int64      | Unique identifier for each retailer                           |
-| invoice_date    | object     | Date when the sale occurred (YYYY-MM-DD format)               |
-| region          | object     | Region where the sale was made (e.g., North, South, etc.)     |
-| state           | object     | U.S. state where the sale was made                            |
-| city            | object     | City where the sale was made                                  |
+| invoice_date    | object     | Date of the sale (YYYY-MM-DD)                                 |
+| region          | object     | Region where the sale occurred                                |
+| state           | object     | U.S. state of the sale                                        |
+| city            | object     | City where the sale occurred                                  |
 | product         | object     | Product category (e.g., Women’s Athletic Footwear)            |
 | price_per_unit  | int64      | Price per unit of the product                                 |
 | units_sold      | int64      | Number of units sold                                          |
-| total_sales     | int64      | Total sales amount (units_sold * price_per_unit)              |
+| total_sales     | int64      | Total sales (units_sold * price_per_unit)                     |
 | operating_profit| float64    | Operating profit generated from the sale                      |
 | sales_method    | object     | Method of sale (e.g., online, in-store)                       |
 
-### Additional Information
+### Dataset Summary
 - **Row Count**: 9,643 entries
-- **Data Types**: Includes object (string), int64 (integer), and float64 (floating-point) data types
-- **Memory Usage**: Approximately 1 MB
-- **Non-null Count**: All columns have 9,643 non-null entries, indicating no missing data.
+- **Memory Usage**: 1 MB
+- **Non-null Count**: All columns have 9,643 non-null entries
+- **Data Types**: A mix of object (string), int64 (integer), and float64 (floating-point)
 
 ## Project Structure
-The project is organized into the following directories and files:
+The project includes the following:
 
-- **Data Dictionary/**: Contains a description of the dataset and fields.
-- **LICENSE**: The license file for the project.
+- **Resources/**: Contains the sales datasets (`athletic_sales_2020.csv` and `athletic_sales_2021.csv`).
+- **Starter_Code/**: Contains the analysis notebook and code (`athletic_sales_analysis.ipynb`).
+- **Visuals/**: Includes all visualizations created during the analysis.
 - **README.md**: This documentation file.
-- **Starter_Code/**: Contains the notebook and Python code used for the analysis.
-- **Resources/**: Includes the dataset used in the analysis.
-- **Visuals/**: Contains PNG files of the visualizations created during the analysis.
 
 ## Visualizations
-The following visualizations were created to provide insights into the dataset:
+The project generated the following visualizations to provide insights:
 
-- **[Total Sales by Retailer](Visuals/total_sales_by_retailer.png)**: A bar chart illustrating the total sales generated by each retailer.
-- **[Top 10 Days with the Most Sales](Visuals/top_10_days_sales.png)**: A bar chart showing the days with the highest athletic footwear sales.
-- **[Top 10 Weeks with the Most Sales](Visuals/top_10_weeks_sales.png)**: A bar chart showing the weeks with the highest athletic footwear sales.
-- **[Operating Profit by Region](Visuals/operating_profit_by_region.png)**: A bar chart showing the operating profit across different regions.
-- **[Price Distribution Across Top 15 Cities](Visuals/price_per_unit_by_city.png)**: A box plot showing the price distribution across the top 15 cities.
-- **[Sales Method Distribution by Retailer](Visuals/sales_method_by_retailer.png)**: A count plot showing the distribution of sales methods (online/in-store) by retailer.
-- **[Top Products Sold by Retailer](Visuals/top_products_by_retailer.png)**: A bar chart showing the most popular products sold by each retailer.
-- **[Monthly Sales Trend by Region](Visuals/sales_trend_by_region.png)**: A line chart illustrating the monthly sales trend by region.
-
-These visuals are located in the **Visuals/** directory and serve as an aid in uncovering trends and patterns within the data.
+1. **[Top 10 Days with the Most Sales](Visuals/top_10_days_sales.png)**: Bar plot showing the days with the highest women's athletic footwear sales.
+2. **[Top 10 Weeks with the Most Sales](Visuals/top_10_weeks_sales.png)**: Bar plot showing the weeks with the highest sales.
+3. **[Monthly Sales Trend](Visuals/monthly_sales_trend.png)**: Line plot showing the monthly sales trend.
+4. **[Total Sales by Retailer](Visuals/total_sales_by_retailer.png)**: Bar plot showing total sales by retailer.
+5. **[Sales Method Distribution by Retailer](Visuals/sales_method_by_retailer.png)**: Count plot showing the distribution of online and in-store sales.
+6. **[Operating Profit by Region](Visuals/operating_profit_by_region.png)**: Bar plot showing operating profit across regions.
+7. **[Price per Unit Distribution Across Top 15 Cities](Visuals/price_per_unit_by_city.png)**: Box plot showing the price distribution across the top 15 cities.
+8. **[Top Products Sold by Retailer](Visuals/top_products_by_retailer.png)**: Bar plot showing the top-selling products by retailer.
+9. **[Sales Trend by Region](Visuals/sales_trend_by_region.png)**: Line plot illustrating the monthly sales trend by region.
+10. **[Total Sales Over Time (Daily)](Visuals/total_sales_daily.png)**: Line plot showing the total daily sales.
+11. **[Heatmap of Sales by Region and Product](Visuals/sales_heatmap_region_product.png)**: Heatmap showing total sales by region and product.
+12. **[Units Sold Distribution by Region](Visuals/units_sold_by_region.png)**: Box plot showing the distribution of units sold across regions.
+13. **[Total Sales by Product Category Over Time](Visuals/total_sales_by_product_over_time.png)**: Line plot showing monthly sales by product category.
+14. **[Correlation Heatmap for Numeric Variables](Visuals/correlation_heatmap.png)**: Heatmap showing the correlation between numeric variables.
 
 ## Use Cases
-The program is designed to answer several key business questions:
+The analysis addresses key business questions:
 
-- **Regional Sales Analysis**: Determine which regions and cities generate the most sales and operating profit. This information can help businesses focus their efforts on high-performing areas.
-- **Retailer Performance**: Identify the top-performing retailers by total sales and product categories. This can guide inventory and marketing decisions.
-- **Profitability Analysis**: Calculate operating profit by product and region to identify opportunities for margin improvement.
-- **Sales Trend Analysis**: Analyze sales trends over time (daily, weekly, and monthly) to understand peak periods and plan future strategies.
+1. **Regional Performance**: Identifies which regions and cities generate the highest sales and operating profit.
+2. **Retailer Insights**: Highlights the performance of top retailers.
+3. **Profitability**: Evaluates operating profit by product and region.
+4. **Sales Trends**: Analyzes sales trends to identify peak sales periods and inform future strategies.
 
 ## Technologies Used
-- **Python**: The core programming language used for data manipulation and analysis.
-- **Pandas**: A powerful data manipulation library used for exploring, transforming, and aggregating data.
-- **Matplotlib & Seaborn**: Libraries used for creating visualizations and graphs to present the results of the analysis.
-- **Jupyter Notebook**: An interactive coding environment used for conducting and presenting the analysis.
-- **Git**: Version control for tracking code changes.
-- **GitHub**: Repository hosting platform used for sharing and collaboration.
-
-## Key Features
-- **Data Exploration**: The program allows users to explore the dataset, calculate key metrics, and display summary statistics.
-- **Data Transformation**: The program performs data transformations such as calculating total sales, profit, and sales trends.
-- **Visual Analysis**: Visual representations of the data provide a clear understanding of regional and retailer performance.
-- **Profit and Sales Insights**: The analysis identifies the most profitable products and regions, as well as sales trends.
-
-## Usage Instructions
-1. **Data Exploration**:
-   - Open the Jupyter Notebook in the **Starter_Code/** folder.
-   - Load the dataset and explore key statistics using Pandas.
-   
-2. **Data Transformation**:
-   - Calculate total sales, operating profit, and sales trends.
-   - Use Pandas to group, aggregate, and summarize the data by region, retailer, and product category.
-   
-3. **Visualizations**:
-   - Create visualizations using Matplotlib and Seaborn to present key findings.
+- **Python**: For data manipulation and analysis.
+- **Pandas**: For data exploration, transformation, and aggregation.
+- **Matplotlib & Seaborn**: For creating visualizations.
+- **Jupyter Notebook**: For conducting and presenting the analysis.
+- **Git/GitHub**: For version control and sharing the project.
 
 ## Recommendations
-Based on the analysis, here are some business recommendations:
+The analysis reveals several recommendations:
 
-1. **Focus on High-Performing Retailers**: Prioritize relationships with retailers that generate the most sales.
-2. **Capitalize on Peak Sales Days/Weeks**: Identify promotional opportunities during peak periods based on sales trends.
-3. **Optimize Inventory for Popular Products**: Use the product sales analysis to adjust inventory levels and ensure stock availability for high-demand products.
-4. **Regional Targeting**: Focus on regions and cities that show the highest sales and profitability, and consider expanding into nearby areas.
+1. **Focus on High-Performing Regions**: Invest in regions with strong sales performance.
+2. **Promote Popular Products**: Optimize inventory and promotions around top-selling products.
+3. **Leverage Sales Trends**: Use peak sales periods to drive promotions and campaigns.
+4. **Improve Profit Margins**: Target regions and products where profitability can be improved.
 
 ## Conclusion
-The **Athletic Sales Data Analysis with Pandas** project provides a comprehensive look at sales performance across regions, retailers, and products. By focusing on key metrics like total sales, operating profit, and sales trends, businesses can make data-driven decisions to optimize their operations and improve profitability.
-
-The visualizations and analyses presented in this project highlight the importance of understanding regional sales trends, retailer performance, and product profitability. These insights enable businesses to tailor their strategies and maximize their impact.
-
-This project has also enhanced my understanding of data analysis techniques and how they can be applied to real-world business scenarios using Python and Pandas.
+The **Athletic Sales Data Analysis** project demonstrates the power of data analysis for driving business decisions. By analyzing sales data across regions, products, and retailers, the project identifies key performance metrics and trends that inform strategic planning. This project enhanced my ability to manipulate, analyze, and visualize large datasets using Python, Pandas, and data visualization libraries.
 
 ## References
 
-Sales Product Data. Available: [https://www.kaggle.com/datasets/knightbearr/sales-product-data](https://www.kaggle.com/datasets/knightbearr/sales-product-data)
+Sales Product Data: [Kaggle Dataset](https://www.kaggle.com/datasets/knightbearr/sales-product-data)
 
-The sales product data above was modified by edX Boot Camps LLC, and is intended for educational purposes only.
+The sales product data was modified by edX Boot Camps LLC, and is intended for educational purposes only.
+
