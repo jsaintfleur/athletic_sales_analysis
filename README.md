@@ -1,5 +1,7 @@
 # Athletic Sales Data Analysis with Pandas
 
+
+
 ## Purpose
 The **Athletic Sales Data Analysis with Pandas** program provides insights into product sales, regional performance, and retailer profitability for a fictional athletic footwear company. This project uses Python's Pandas library to explore and analyze sales data, highlighting key trends and metrics to aid business decision-making.
 
@@ -14,6 +16,34 @@ The **Athletic Sales Data Analysis with Pandas** project addresses key business 
 - How do sales methods vary across retailers?
 
 This project demonstrates the use of Pandas for data manipulation and Matplotlib/Seaborn for visualizations.
+
+## Table of Contents
+
+1. [Purpose](#purpose)
+2. [Overview](#overview)
+3. [Data Dictionary](#data-dictionary)
+4. [Project Structure](#project-structure)
+5. [Visualizations](#visualizations)
+   - [Top 10 Days with the Most Sales](#top-10-days-with-the-most-sales)
+   - [Top 10 Weeks with the Most Sales](#top-10-weeks-with-the-most-sales)
+   - [Monthly Sales Trend](#monthly-sales-trend)
+   - [Total Sales by Retailer](#total-sales-by-retailer)
+   - [Sales Method Distribution by Retailer](#sales-method-distribution-by-retailer)
+   - [Operating Profit by Region](#operating-profit-by-region)
+   - [Price per Unit Distribution Across Top 15 Cities](#price-per-unit-distribution-across-top-15-cities)
+   - [Top Products Sold by Retailer](#top-products-sold-by-retailer)
+   - [Sales Trend by Region](#sales-trend-by-region)
+   - [Total Sales Over Time (Daily)](#total-sales-over-time-daily)
+   - [Heatmap of Sales by Region and Product](#heatmap-of-sales-by-region-and-product)
+   - [Units Sold Distribution by Region](#units-sold-distribution-by-region)
+   - [Total Sales by Product Category Over Time](#total-sales-by-product-category-over-time)
+   - [Correlation Heatmap for Numeric Variables](#correlation-heatmap-for-numeric-variables)
+6. [Use Cases](#use-cases)
+7. [Technologies Used](#technologies-used)
+8. [Recommendations](#recommendations)
+9. [Conclusion](#conclusion)
+10. [References](#references)
+
 
 ## Data Dictionary
 The dataset contains the following columns:
@@ -47,23 +77,95 @@ The project includes the following:
 - **Visuals/**: Includes all visualizations created during the analysis.
 - **README.md**: This documentation file.
 
+## Installation
+
+To run this project locally, follow these steps:
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/jsaintfleur/athletic-sales-analysis.git
+    ```
+
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd athletic-sales-analysis
+   ```
+3. **Create a Virtual Environment (optional but recommended)**:
+   ```bash
+ python -m venv venv
+source venv/bin/activate   # On macOS/Linux
+venv\Scripts\activate      # On Windows
+    ```
+
+4. **Install Dependencies: Install the required Python libraries by running:**
+```python
+# Import Libraries and Dependencies
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
+from matplotlib.ticker import FuncFormatter
+import seaborn as sns
+ ```
+5. **Launch the Jupyter Notebook: Open the project analysis notebook:**
+``` bash
+jupyter notebook
+```
+6. **Run the Analysis:** Open the `athletic_sales_analysis.ipynb` notebook and run the cells to view the analysis and visualizations.
+
+7. **Dataset Location:** Ensure the dataset files (`athletic_sales_2020.csv` and `athletic_sales_2021.csv`) are located in the Resources/ directory.
+
+8. **Prerequisites**
+- Python 3.8 or higher
+- Jupyter Notebook or JupyterLab
+- A web browser to view the notebook
+
 ## Visualizations
 The project generated the following visualizations to provide insights:
 
-1. **[Top 10 Days with the Most Sales](Visuals/top_10_days_sales.png)**: Bar plot showing the days with the highest women's athletic footwear sales.
-2. **[Top 10 Weeks with the Most Sales](Visuals/top_10_weeks_sales.png)**: Bar plot showing the weeks with the highest sales.
-3. **[Monthly Sales Trend](Visuals/monthly_sales_trend.png)**: Line plot showing the monthly sales trend.
-4. **[Total Sales by Retailer](Visuals/total_sales_by_retailer.png)**: Bar plot showing total sales by retailer.
-5. **[Sales Method Distribution by Retailer](Visuals/sales_method_by_retailer.png)**: Count plot showing the distribution of online and in-store sales.
-6. **[Operating Profit by Region](Visuals/operating_profit_by_region.png)**: Bar plot showing operating profit across regions.
-7. **[Price per Unit Distribution Across Top 15 Cities](Visuals/price_per_unit_by_city.png)**: Box plot showing the price distribution across the top 15 cities.
-8. **[Top Products Sold by Retailer](Visuals/top_products_by_retailer.png)**: Bar plot showing the top-selling products by retailer.
-9. **[Sales Trend by Region](Visuals/sales_trend_by_region.png)**: Line plot illustrating the monthly sales trend by region.
-10. **[Total Sales Over Time (Daily)](Visuals/total_sales_daily.png)**: Line plot showing the total daily sales.
-11. **[Heatmap of Sales by Region and Product](Visuals/sales_heatmap_region_product.png)**: Heatmap showing total sales by region and product.
-12. **[Units Sold Distribution by Region](Visuals/units_sold_by_region.png)**: Box plot showing the distribution of units sold across regions.
-13. **[Total Sales by Product Category Over Time](Visuals/total_sales_by_product_over_time.png)**: Line plot showing monthly sales by product category.
-14. **[Correlation Heatmap for Numeric Variables](Visuals/correlation_heatmap.png)**: Heatmap showing the correlation between numeric variables.
+1. **Top 10 Days with the Most Sales**: Bar plot showing the days with the highest women's athletic footwear sales.
+   ![Top 10 Days with the Most Sales](Visuals/top_10_days_sales.png)
+   
+2. **Top 10 Weeks with the Most Sales**: Bar plot showing the weeks with the highest sales.
+   ![Top 10 Weeks with the Most Sales](Visuals/top_10_weeks_sales.png)
+
+3. **Monthly Sales Trend**: Line plot showing the monthly sales trend.
+   ![Monthly Sales Trend](Visuals/monthly_sales_trend.png)
+
+4. **Total Sales by Retailer**: Bar plot showing total sales by retailer.
+   ![Total Sales by Retailer](Visuals/total_sales_by_retailer.png)
+
+5. **Sales Method Distribution by Retailer**: Count plot showing the distribution of online and in-store sales.
+   ![Sales Method Distribution by Retailer](Visuals/sales_method_by_retailer.png)
+
+6. **Operating Profit by Region**: Bar plot showing operating profit across regions.
+   ![Operating Profit by Region](Visuals/operating_profit_by_region.png)
+
+7. **Price per Unit Distribution Across Top 15 Cities**: Box plot showing the price distribution across the top 15 cities.
+   ![Price per Unit Distribution Across Top 15 Cities](Visuals/price_per_unit_by_city.png)
+
+8. **Top Products Sold by Retailer**: Bar plot showing the top-selling products by retailer.
+   ![Top Products Sold by Retailer](Visuals/top_products_by_retailer.png)
+
+9. **Sales Trend by Region**: Line plot illustrating the monthly sales trend by region.
+   ![Sales Trend by Region](Visuals/sales_trend_by_region.png)
+
+10. **Total Sales Over Time (Daily)**: Line plot showing the total daily sales.
+    ![Total Sales Over Time (Daily)](Visuals/total_sales_daily.png)
+
+11. **Heatmap of Sales by Region and Product**: Heatmap showing total sales by region and product.
+    ![Heatmap of Sales by Region and Product](Visuals/sales_heatmap_region_product.png)
+
+12. **Units Sold Distribution by Region**: Box plot showing the distribution of units sold across regions.
+    ![Units Sold Distribution by Region](Visuals/units_sold_by_region.png)
+
+13. **Total Sales by Product Category Over Time**: Line plot showing monthly sales by product category.
+    ![Total Sales by Product Category Over Time](Visuals/total_sales_by_product_over_time.png)
+
+14. **Correlation Heatmap for Numeric Variables**: Heatmap showing the correlation between numeric variables.
+    ![Correlation Heatmap for Numeric Variables](Visuals/correlation_heatmap.png)
+
+---
 
 ## Use Cases
 The analysis addresses key business questions:
@@ -90,6 +192,8 @@ The analysis reveals several recommendations:
 
 ## Conclusion
 The **Athletic Sales Data Analysis** project demonstrates the power of data analysis for driving business decisions. By analyzing sales data across regions, products, and retailers, the project identifies key performance metrics and trends that inform strategic planning. This project enhanced my ability to manipulate, analyze, and visualize large datasets using Python, Pandas, and data visualization libraries.
+
+[Back to Top](#table-of-contents)
 
 ## References
 
