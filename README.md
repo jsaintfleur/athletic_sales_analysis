@@ -77,27 +77,31 @@ The project includes the following:
 - **Visuals/**: Includes all visualizations created during the analysis.
 - **README.md**: This documentation file.
 
+---
+
 ## Installation
 
 To run this project locally, follow these steps:
 
-1. **Clone the Repository**:
+1. **Clone the Repository:**
 ```bash
    git clone https://github.com/jsaintfleur/athletic-sales-analysis.git
-    ```
+```
 
-2. **Navigate to the Project Directory**:
+2. **Navigate to the Project Directory:**
 ```bash
    cd athletic-sales-analysis
-   ```
-3. **Create a Virtual Environment (optional but recommended)**:
+```
+3. **Create a Virtual Environment (optional but recommended):**
+
 ```bash
- python -m venv venv
+python -m venv venv
 source venv/bin/activate   # On macOS/Linux
 venv\Scripts\activate      # On Windows
-    ```
+```
 
 4. **Install Dependencies: Install the required Python libraries by running:**
+
 ```python
 # Import Libraries and Dependencies
 import pandas as pd
@@ -106,19 +110,25 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mtick
 from matplotlib.ticker import FuncFormatter
 import seaborn as sns
- ```
+```
+
 5. **Launch the Jupyter Notebook: Open the project analysis notebook:**
+
 ``` bash
 jupyter notebook
 ```
-6. **Run the Analysis:** Open the `athletic_sales_analysis.ipynb` notebook and run the cells to view the analysis and visualizations.
+6. **Run the Analysis:** 
+Open the `athletic_sales_analysis.ipynb` notebook and run the cells to view the analysis and visualizations.
 
-7. **Dataset Location:** Ensure the dataset files (`athletic_sales_2020.csv` and `athletic_sales_2021.csv`) are located in the Resources/ directory.
+7. **Dataset Location:** 
+Ensure the dataset files (`athletic_sales_2020.csv` and `athletic_sales_2021.csv`) are located in the Resources/ directory.
 
 8. **Prerequisites**
 - Python 3.8 or higher
 - Jupyter Notebook or JupyterLab
 - A web browser to view the notebook
+
+---
 
 ## Visualizations
 
