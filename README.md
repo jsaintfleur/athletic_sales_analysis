@@ -82,12 +82,12 @@ The project includes the following:
 To run this project locally, follow these steps:
 
 1. **Clone the Repository**:
-   ```bash
+```bash
    git clone https://github.com/jsaintfleur/athletic-sales-analysis.git
     ```
 
 2. **Navigate to the Project Directory**:
-   ```bash
+```bash
    cd athletic-sales-analysis
    ```
 3. **Create a Virtual Environment (optional but recommended)**:
